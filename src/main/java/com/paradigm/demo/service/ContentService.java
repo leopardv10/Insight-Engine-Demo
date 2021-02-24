@@ -5,7 +5,6 @@ import com.paradigm.demo.dao.ContentDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Timestamp;
 
 @Service
 public class ContentService {
@@ -20,11 +19,9 @@ public class ContentService {
 		contentDao.ocrUpdate(text);
 	}
 
-	public void finish(int task_id, String file_name) { contentDao.finish(task_id, file_name); }
+	public void finish(int task_id, String file_name, String status) { contentDao.finish(task_id, file_name, status); }
 
 	public String select(int task_id, String file_name) { return contentDao.getText(task_id, file_name); }
-
-	public int selectId() { return contentDao.getCurId(); }
 
 	public void delete(int task_id) { contentDao.delete(task_id); }
 }

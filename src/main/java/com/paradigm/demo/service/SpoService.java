@@ -1,8 +1,12 @@
 package com.paradigm.demo.service;
 
+import com.paradigm.demo.bean.Result;
+import com.paradigm.demo.bean.Spo;
 import com.paradigm.demo.dao.SpoDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 
 @Service
@@ -17,5 +21,7 @@ public class SpoService {
 
 	public void delete(int task_id) { spoDao.delete(task_id); }
 
-	public int selectId() { return spoDao.selectId(); }
+	public List<Result> select(int task_id, String file_name) {
+		return spoDao.select(task_id, file_name);
+	}
 }

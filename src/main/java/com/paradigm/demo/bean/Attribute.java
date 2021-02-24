@@ -6,9 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Data
-public class UserData {
-	private int id;
-	private String file_name;
-	private String content;
-	private String spo;
+public class Attribute {
+	private String attr;
+	private String concept;
+	private String value;
 }
